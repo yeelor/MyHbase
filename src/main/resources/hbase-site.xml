@@ -1,0 +1,56 @@
+<?xml version="1.0"?> 
+<?xml-stylesheet type="text/xsl" href="configuration.xsl"?> 
+<configuration> 
+
+ <property> 
+<name>javax.jdo.option.ConnectionURL</name> 
+<value>jdbc:mysql://master:3306/hive?characterEncoding=UTF-8</value> 
+</property> 
+ <property> 
+<name>javax.jdo.option.ConnectionDriverName</name> 
+<value>com.mysql.jdbc.Driver</value> 
+</property> 
+ <property> 
+<name>javax.jdo.option.ConnectionUserName</name> 
+<value>hive</value> 
+ </property> 
+ <property> 
+<name>javax.jdo.option.ConnectionPassword</name> 
+<value>guotao</value> 
+</property> 
+
+<property>
+  <name>hive.hwi.war.file</name>
+  <value>/lib/hive-hwi-0.11.0.war</value>
+  <description>This sets the path to the HWI war file, relative to ${HIVE_HOME}. </description>
+</property>
+
+
+<property>
+<name>hive.stats.dbconnectionstring</name>
+<value>jdbc:mysql://master/hive_stats?user=hive&amp;password=guotao</value>
+<description>The default connection string for the database that stores temporary hive statistics.</description>
+</property>
+<property>
+<name>hive.stats.dbclass</name>
+<value>jdbc:mysql</value>
+<description>The default database that stores temporary hive statistics.</description>
+</property>
+
+<property>
+<name>hive.stats.jdbcdriver</name>
+<value>com.mysql.jdbc.Driver</value>
+<description>The JDBC driver for the database that stores temporary hive statistics.</description>
+</property>
+
+<property> 
+ <name>hive.aux.jars.path</name> 
+<value>file:///usr/local/hive/lib/hive-hbase-handler-0.11.0.jar,file:///usr/local/hive/lib/hbase-0.94.6.1.jar,file:///usr/local/hive/lib/zookeeper-3.4.3.jar</value> 
+</property> 
+
+<property> 
+ <name>hbase.zookeeper.quorum</name> 
+ <value>slave1,slave2</value> 
+</property> 
+
+</configuration> 
